@@ -29,9 +29,12 @@ function init() {
     ctx.globalCompositeOperation = 'overlay';
 
     colors.forEach(function callback(color, i) {
-        pendulums.push(new DoublePendulum(ctx, _, _, (180.5 + i * 0.5) * (Math.PI / 180), _, _, color, spar, _, _, _, _, _, _, _, _, _, _, 0, 12, _, _, _, _, _, _, _, _, _, _, _, 0, 0, 0));
+        pendulums.push(new DoublePendulum(ctx, _, _, (180.5 + i * 0.5) * (Math.PI / 180), _, _, color, spar, _, _, _, _, _, _, _, _, _, _, 7, 12, _, _, _, _, _, _, _, _, _, _, _, 0, 2, 0));
         pendulums[i].draw();
     });
+
+    active = !active;
+    draw();
 }
 
 var active = false;
